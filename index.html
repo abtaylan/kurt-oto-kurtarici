@@ -58,6 +58,63 @@
 }
 </script>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Kandıra'da çekici kaç dakikada geliyor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Merkezimiz Kandıra'da olduğu için Kandıra ve köylerinde ortalama olarak en hızlı müdahale süresini sağlıyoruz. Kocaeli, İstanbul, Sakarya, Bursa ve Yalova gibi diğer bölgelerde süre, aracın bulunduğu konuma göre değişir. Arayıp konumunuzu paylaştığınızda size net bir tahmini süre veriyoruz."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Gece yarısı veya hafta sonu çekici çağırabilir miyim?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Evet. Kurt Oto Kurtarıcı 7/24 kesintisiz hizmet verir; gece, gündüz, hafta sonu veya resmi tatil fark etmeksizin dispatch hattımız her zaman açıktır."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Sadece Kandıra ve Kocaeli'de mi hizmet veriyorsunuz?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hayır. Merkezimiz Kandıra, Kocaeli'de olsa da İstanbul, Sakarya, Bursa ve Yalova genelinde de oto çekici ve yol yardım hizmeti sağlıyoruz. Bulunduğunuz ili belirtmeniz yeterli."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Çekici dışında akü takviyesi veya lastik değişimi için de arayabilir miyim?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Evet. Aracınızı çekmemiz gerekmeden de akü takviyesi, lastik değişimi, yakıt ikmali desteği ve kilitli kapı/anahtar problemleri gibi yol yardımı hizmetlerini yerinizde çözüyoruz."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kaza sonrası aracımı sigorta sürecim için taşıyabilir misiniz?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Evet, kaza sonrası hasarlı araçları sigorta ve ekspertiz sürecinize uygun şekilde, hasarsız ve güvenli biçimde istediğiniz servise veya adrese taşıyoruz."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ücretlendirme nasıl yapılıyor, telefonda fiyat öğrenebilir miyim?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Konumunuzu ve talebinizi öğrendikten sonra hizmete başlamadan önce size net bir fiyat bilgisi veriyoruz; sürpriz ücretle karşılaşmazsınız."
+      }
+    }
+  ]
+}
+</script>
+
 <style>
   :root{
     --bg:            #0F141C;
@@ -289,6 +346,23 @@
   .cred-row .c-k{color:var(--text-faint);flex:none;}
   .cred-row .c-v{color:var(--text);font-family:var(--font-mono);font-size:13.5px;text-align:right;}
 
+  /* ---------- faq ---------- */
+  .faq-list{max-width:820px;border-top:1px solid var(--border);}
+  .faq-item{border-bottom:1px solid var(--border);}
+  .faq-q{
+    width:100%;display:flex;align-items:center;justify-content:space-between;gap:20px;
+    background:none;border:none;text-align:left;cursor:pointer;
+    padding:22px 4px;font-family:var(--font-display);font-size:17.5px;font-weight:500;color:var(--text);
+  }
+  .faq-q .plus{flex:none;width:22px;height:22px;color:var(--amber);position:relative;}
+  .faq-q .plus::before,.faq-q .plus::after{content:"";position:absolute;background:currentColor;top:50%;left:50%;transform:translate(-50%,-50%);}
+  .faq-q .plus::before{width:14px;height:2px;}
+  .faq-q .plus::after{width:2px;height:14px;transition:transform .2s ease;}
+  .faq-item.open .faq-q .plus::after{transform:translate(-50%,-50%) rotate(90deg);}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .25s ease;}
+  .faq-a p{padding:0 4px 22px;color:var(--text-muted);font-size:15px;max-width:680px;}
+  .faq-item.open .faq-a{max-height:240px;}
+
   /* ---------- cta banner ---------- */
   .cta-banner{
     background:linear-gradient(90deg,#1A130A,#221708);
@@ -369,6 +443,7 @@
       <a href="#bolgeler">Bölgeler</a>
       <a href="#neden-biz">Neden Biz</a>
       <a href="#hakkimizda">Hakkımızda</a>
+      <a href="#sss">SSS</a>
       <a href="#iletisim">İletişim</a>
     </nav>
     <div class="nav-cta">
@@ -582,6 +657,42 @@
   </div>
 </section>
 
+<section id="sss">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Sıkça Sorulan Sorular</div>
+      <h2>Merak ettikleriniz.</h2>
+      <p>Kandıra, Kocaeli, İstanbul, Sakarya, Bursa ve Yalova'daki müşterilerimizin en sık sorduğu sorular.</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item open">
+        <button class="faq-q"><span>Kandıra'da çekici kaç dakikada geliyor?</span><span class="plus"></span></button>
+        <div class="faq-a"><p>Merkezimiz Kandıra'da olduğu için Kandıra ve köylerinde en hızlı müdahale süresini sağlıyoruz. Kocaeli, İstanbul, Sakarya, Bursa ve Yalova gibi diğer bölgelerde süre, aracın bulunduğu konuma göre değişir. Arayıp konumunuzu paylaştığınızda size net bir tahmini süre veriyoruz.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>Gece yarısı veya hafta sonu çekici çağırabilir miyim?</span><span class="plus"></span></button>
+        <div class="faq-a"><p>Evet. Kurt Oto Kurtarıcı 7/24 kesintisiz hizmet verir; gece, gündüz, hafta sonu veya resmi tatil fark etmeksizin dispatch hattımız her zaman açıktır.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>Sadece Kandıra ve Kocaeli'de mi hizmet veriyorsunuz?</span><span class="plus"></span></button>
+        <div class="faq-a"><p>Hayır. Merkezimiz Kandıra, Kocaeli'de olsa da İstanbul, Sakarya, Bursa ve Yalova genelinde de oto çekici ve yol yardım hizmeti sağlıyoruz. Bulunduğunuz ili belirtmeniz yeterli.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>Çekici dışında akü takviyesi veya lastik değişimi için de arayabilir miyim?</span><span class="plus"></span></button>
+        <div class="faq-a"><p>Evet. Aracınızı çekmemiz gerekmeden de akü takviyesi, lastik değişimi, yakıt ikmali desteği ve kilitli kapı/anahtar problemleri gibi yol yardımı hizmetlerini yerinizde çözüyoruz.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>Kaza sonrası aracımı sigorta sürecim için taşıyabilir misiniz?</span><span class="plus"></span></button>
+        <div class="faq-a"><p>Evet, kaza sonrası hasarlı araçları sigorta ve ekspertiz sürecinize uygun şekilde, hasarsız ve güvenli biçimde istediğiniz servise veya adrese taşıyoruz.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>Ücretlendirme nasıl yapılıyor, telefonda fiyat öğrenebilir miyim?</span><span class="plus"></span></button>
+        <div class="faq-a"><p>Konumunuzu ve talebinizi öğrendikten sonra hizmete başlamadan önce size net bir fiyat bilgisi veriyoruz; sürpriz ücretle karşılaşmazsınız.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <div class="cta-banner">
   <div class="wrap">
     <div>
@@ -679,6 +790,15 @@
     var open = links.style.display === 'flex';
     links.style.display = open ? 'none' : 'flex';
     links.style.cssText += 'position:absolute;top:78px;left:0;right:0;background:#171E27;flex-direction:column;padding:18px 24px;gap:16px;border-bottom:1px solid #2B3542;';
+  });
+
+  document.querySelectorAll('.faq-q').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var item = btn.closest('.faq-item');
+      var wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(function(i){ i.classList.remove('open'); });
+      if(!wasOpen){ item.classList.add('open'); }
+    });
   });
 </script>
 
